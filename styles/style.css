@@ -1,0 +1,95 @@
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; 
+  box-sizing: border-box;
+  scroll-behavior: smooth; 
+}
+
+.ppal-content{
+  position: relative;
+}
+
+#bg-video {
+    
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+#welAvat{
+  position:absolute;
+  bottom:0;
+  left:65%;
+  width: 30%;
+}
+
+
+#aboutMe{
+  position: absolute;
+    bottom: 30%;  
+    left: 30%; 
+    transform: translateX(-50%); 
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    width: 50%;
+    height: 50%;
+    font-weight: lighter;
+    
+}
+
+#aboutMe h4{
+  font-weight: bolder;
+}
+
+#aboutMe a{
+  font-weight: bolder;
+  text-decoration: none;
+  color: rgb(247, 229, 208);
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+#aboutMe a:hover{
+  transform: scale(1.1);
+  -webkit-text-stroke: 0.3px white;
+}
+
+#contacto,#portfolio,#formacion,#skills,#experiencia{
+  text-align: center;
+  height: 100vh;
+  width: 100vw; 
+  align-content: center;
+  font-size: 100px;
+}
+
+#contacto{
+  background-color: blue;
+}
+#portfolio{
+  background-color: red;
+}
+
+#formacion{
+  background-color: green;
+}
+
+#skills{
+  background-color: yellow;
+}
+
+#experiencia{
+  background-color: orange;
+}
