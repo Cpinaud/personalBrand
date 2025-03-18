@@ -15,43 +15,57 @@ html, body {
   scroll-behavior: smooth; 
 }
 
-.ppal-content{
-  position: relative;
-}
+
 
 #bg-video {
-    
-    top: 0;
-    left: 0;
-    width: 100vw;
+z-index: -1;
+position: absolute;
+    width: 100%;
     height: 100vh;
     object-fit: cover;
   }
 
 #welAvat{
-  position:absolute;
-  bottom:0;
+  padding: 0;
+  margin: 0;
+  bottom: 0%;
   left:65%;
-  width: 30%;
+  width:60vh;  
+  height: 70vh;
+  align-self: flex-end;
 }
 
-
+.aboutMe{
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100vh;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  
+}
 #aboutMe{
-  position: absolute;
-    bottom: 30%;  
-    left: 30%; 
-    transform: translateX(-50%); 
-    border-radius: 10px;
+    
     padding: 10px;
     color: white;
     width: 50%;
-    height: 50%;
+    height: 100vh;
     font-weight: lighter;
+    align-content: center;
+   
     
+}
+
+#aboutMe h2,h4{
+  text-align: justify;  
 }
 
 #aboutMe h4{
   font-weight: bolder;
+}
+
+#aboutMe h3{
+  display: none;
 }
 
 #aboutMe a{
@@ -60,7 +74,14 @@ html, body {
   color: rgb(247, 229, 208);
   transition: transform 0.3s ease;
   display: inline-block;
+  align-content: end;
+  text-shadow:
+  1.2px 0 0 black,    /* Desplaza a la derecha */
+  -1px 0 0 black,   /* Desplaza a la izquierda */
+  0 0.3px 0 black,    /* Desplaza abajo */
+  0 -1px 0 black;   /* Desplaza arriba */
 }
+
 
 #aboutMe a:hover{
   transform: scale(1.1);
@@ -92,4 +113,87 @@ html, body {
 
 #experiencia{
   background-color: orange;
+}
+
+h1 {
+  font-size: 3vw; 
+}
+
+#linkAboutMe{
+  display: none;
+}
+/* 🔹 Responsive para móviles */
+@media (max-width: 780px) {
+ 
+  #aboutMe h1 {
+    font-size: 5vw; 
+  }
+  #aboutMe h4 {
+    font-size: 4vw; 
+  }  
+
+  #welDivide{
+    display: none;
+  }
+  #aboutMe h5{
+    display:block;
+  }
+  
+  #aboutMe a{
+    text-shadow:
+  1.2px 0 0 black, 
+  -1px 0 0 black,  
+  0 0.3px 0 black,   
+  0 -1px 0 black;   
+  }
+
+  .aboutMe{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    
+  }
+
+  #aboutMe{
+    width: 90%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-weight: lighter;
+    justify-content: space-between;
+    justify-content: center;
+    
+  }
+  #welAvat{
+    width: 40vh; 
+    height: 60vh;
+    align-self:center;
+    
+
+  }
+#linkAboutMe{
+  color:rgb(183, 180, 180);
+  background: none;
+  text-shadow: none;
+  border: none;
+  text-decoration: underline;
+  display: block;
+
+  
+}
+
+#aboutMeMobileLinks{
+  display: block;
+}
+#aboutMeMobile{
+  display: none;
+}
+
+  #aboutMe h4:nth-child(3),h2{
+    display: none;
+  }
 }
